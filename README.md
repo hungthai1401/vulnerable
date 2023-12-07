@@ -41,3 +41,6 @@ Then, you can modify the `dashboard.blade.php` file:
 +    <livewire:vulnerable cols='4' rows='2' />
 </x-pulse>
 ```
+
+## Credits
+- [Aaron Francis](https://github.com/aarondfrancis) for his [Outdated](https://github.com/aarondfrancis/pulse-outdated) package
