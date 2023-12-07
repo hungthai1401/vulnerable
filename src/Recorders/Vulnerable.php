@@ -24,7 +24,11 @@ final class Vulnerable
         }
 
         $result = Process::run(command: 'composer audit -f json --locked');
-        if ($result->failed()) {
+
+        /**
+         * @link https://github.com/composer/composer/issues/7323
+         */
+        if ($result->failed() && '' !== $result->errorOutput()) {
             throw new RuntimeException(message: 'Composer audit failed: '.$result->errorOutput());
         }
 
